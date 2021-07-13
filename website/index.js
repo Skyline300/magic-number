@@ -1,6 +1,4 @@
 window.addEventListener('DOMContentLoaded', (event) => {
-    alert("Dom Loaded")
-    console.log('DOM fully loaded and parsed');
     function simpleAlert() {
         alert("Button Pressed")
     }
@@ -12,5 +10,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }).then(response => response.json())
             .then(data => console.log(data));
     })
-
+    alert("Dom Loaded")
+    console.log('DOM fully loaded and parsed');
 });

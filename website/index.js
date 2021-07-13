@@ -6,9 +6,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     createSessionButton.addEventListener("click", () => {
         simpleAlert()
         fetch('http://localhost:8000/', {
-            method: 'PUT'
+            method: 'POST'
         }).then(response => response.json())
-            .then(data => console.log(data));
+            .then(data => console.log(data.msg));
     })
     alert("Dom Loaded")
     console.log('DOM fully loaded and parsed');

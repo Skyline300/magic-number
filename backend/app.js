@@ -7,7 +7,7 @@ app.use(cors())
 
 app.post('/',function(req,res,next){
     console.log('Creating session')
-    res.json({msg: 'creating new session'})
+    res.send("creating new session")
 })
 
 app.listen(8000,function () {

@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
     const createSessionButton = document.getElementById('create-session-button')
     createSessionButton.addEventListener("click", () => {
-         // simpleAlert()
+        // simpleAlert()
         fetch('http://localhost:8000/', {
             method: 'POST'
         }).then(

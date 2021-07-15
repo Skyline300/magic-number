@@ -17,6 +17,24 @@ app.post('/',function(req,res){
     res.json({session_id: sessionId})
 })
 
+// Middleware for making attempt
+// /:sessionId to extract param from path
+app.put('/:sessionId', function (req, res) {
+    // extract sessionId from params
+    const sessionId = req.params.sessionId;
+
+    // extract attempt from query
+    const attempt = req.query.attempt;
+
+    // retrieve appropriate magicNumberGame based on the session Id
+    const magicNumberGame = sessions[sessionId];
+
+    // Make a guess and get the progress
+    const progress = magicNumberGame.guess(attempt);
+
+    // Send the progress, treat it as JSON and put the JSON string in the response body
+    return res.json(progress);
+});
 app.listen(8000,function () {
     console.log('Listening on port 8000')
 })

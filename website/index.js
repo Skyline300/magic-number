@@ -26,8 +26,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     // Add a event listener for the click event
     guessButton.addEventListener('click', function () {
-        // When the button is click, we want to alert
-        alert('Guess Button clicked!');
 
         // Get reference to the 2 input field
         const sessionIdInput = document.getElementById('session-id-input');
